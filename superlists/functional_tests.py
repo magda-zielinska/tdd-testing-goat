@@ -16,7 +16,7 @@ class NewVisitorTest(unittest.TestCase):
 		# Edith has heard about a cool new online to-do app, 
 		# she goes to check out its homepage
 
-		browser.get('http://localhost:8000')
+		self.browser.get('http://localhost:8000')
 
 		# She notices the page title and header mention to-do lists
 
