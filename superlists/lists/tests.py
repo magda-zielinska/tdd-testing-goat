@@ -79,6 +79,6 @@ class NewListTest(TestCase):
 	def test_redirects_after_POST(self):
 		response = self.client.post('/lists/new', data={'item_text': 'A new list item'})
 		self.assertEqual(response.status_code, 302)
-		self.assertRedirects(response, '/lists/the-only-list-in-the-world/')
+		self.assertEqual	(response['location'], '/lists/the-only-list-in-the-world/')
 
 
